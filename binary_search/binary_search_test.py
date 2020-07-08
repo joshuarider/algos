@@ -17,8 +17,9 @@ class TestBinarySearch(unittest.TestCase):
     def test_search_not_found_mid(self):
         self.assertIsNone(search(4, NUMBERS))
 
-    def test_search__found_first(self):
-        self.assertEqual(0, search(1, NUMBERS))
+    def test_search_found(self):
+        for i, num in enumerate(NUMBERS):
+            self.assertEqual(i, search(num, NUMBERS))
 
 
 if __name__ == "__main__":
